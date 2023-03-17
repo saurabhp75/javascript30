@@ -48,6 +48,7 @@ body,html {
 
 .keys {
   display: flex;
+  flex-wrap: wrap;
   flex: 1;
   min-height: 100vh;
   align-items: center;
@@ -70,8 +71,8 @@ body,html {
 
 .playing {
   transform: scale(1.1);
-  border-color: #ffc600;
-  box-shadow: 0 0 1rem #ffc600;
+  border-color: hsl(46.6, 100%, 50%);
+  box-shadow: 0 0 1rem hsl(46.6, 100%, 50%);
 }
 
 kbd {
@@ -83,5 +84,5 @@ kbd {
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: .1rem;
-  color: #ffc600;
+  color: hsl(46.6, 100%, 50%);
 }
