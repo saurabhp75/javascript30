@@ -34,7 +34,7 @@ body {
 } */
 
 html {
-  font-size: 10px;
+  font-size: calc(10/16*1rem);
   background: url("../images/background.jpg") bottom center;
   background-size: cover;
 }
