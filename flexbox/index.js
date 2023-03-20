@@ -1,12 +1,19 @@
-console.log("hello world");
-
 const panels = document.querySelectorAll(".panel");
+const panel = document.querySelector(".panels");
 
-function handleClick(e) {
-  console.log("panelClicked");
-  this.style.flex = 3;
+function clickHandler(e) {
+  // console.log("clicked");
+  e.currentTarget.classList.toggle("open");
 }
 
-panels.forEach((key) => {
-  key.addEventListener("click", handleClick);
+function handleTransition(e) {
+  console.log(e.propertyName);
+  if (e.propertyName.includes("flex")) {
+    panel.classList.toggle("open");
+  }
+}
+
+panels.forEach((e) => {
+  e.addEventListener("click", clickHandler);
+  e.addEventListener("transitionend", handleTransition);
 });

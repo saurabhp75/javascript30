@@ -81,46 +81,46 @@
       filteredInventors = inventors.filter((key) => {
         return key.year < 1600 && key.year >= 1500;
       });
-      // console.log(filteredInventors);
+      console.log(filteredInventors);
 
       // Array.prototype.map()
       // 2. Give us an array of the inventors first and last names
       filteredInventors = inventors.map((key) => {
         return { first: key.first, last: key.last };
       });
-      // console.log(filteredInventors);
+      console.log(filteredInventors);
 
       // Array.prototype.sort()
       // 3. Sort the inventors by birthdate, oldest to youngest
       inventorsCopy = inventors.map((key) => key);
       inventorsCopy.sort((a, b) => a.year - b.year);
-      // console.log(inventorsCopy);
+      console.log(inventorsCopy);
 
       // Array.prototype.reduce()
       // 4. How many years did all the inventors live all together?
       filteredInventors = inventors.reduce((acc, key) => {
         return acc + key.passed - key.year;
       }, 0);
-      // console.log(filteredInventors);
+      console.log(filteredInventors);
 
       // Verify the result
       filteredInventors = inventors.map((key) => {
         return { ...key, age: key.passed - key.year };
       });
-      // console.log(filteredInventors);
+      console.log(filteredInventors);
 
       // 5. Sort the inventors by years lived
       inventorsCopy = inventors.map((key) => key);
       inventorsCopy.sort((key1, key2) => {
         return key1.passed - key1.year - (key2.passed - key2.year);
       });
-      // console.log(inventorsCopy);
+      console.log(inventorsCopy);
 
       // Verify the result
       tempInventors = inventorsCopy.map((key) => {
         return { ...key, lifeSpan: key.passed - key.year };
       });
-      // console.log(tempInventors);
+      console.log(tempInventors);
 
       // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
       // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
@@ -142,8 +142,8 @@
       peopleCopy.sort((a, b) => {
         return a.split(", ")[1].localeCompare(b.split(", ")[1]);
       });
+      console.log(peopleCopy);
 
-      // console.log(peopleCopy);
       // 8. Reduce Exercise
       // Sum up the instances of each of these
       const data = [
@@ -164,18 +164,9 @@
       ];
 
       const result = data.reduce((acc, key) => {
-        // return (acc[key] = acc[key] ? acc[key] + 1 : 0);
-        // if (acc[key]) {
-        //   acc[key]++;
-        // } else {
-        //   acc[key] = 1;
-        // }
-        // return acc;
-        console.log(acc);
-        acc[key] = acc[key] ? acc[key]++ : 1;
+        acc[key] = acc[key] ? acc[key] + 1 : 1;
         return acc;
       }, {});
-      console.log("*****************");
       console.log(result);
     </script>
   </body>
