@@ -15,7 +15,7 @@ let lineWidth = 5;
 ctx.strokeStyle = "#BADA55";
 ctx.lineJoin = "round";
 ctx.lineCap = "round";
-ctx.globalCompositeOperation = "color-burn";
+ctx.globalCompositeOperation = "multiply";
 
 function Draw(e) {
   if (!isDrawing) return;

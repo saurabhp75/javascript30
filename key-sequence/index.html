@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Key detection</title>
+    <link rel="icon" href="http://fav.farm/🔥"
+  </head>
+  <body>
+    <script>
+      console.log("hello world!");
+
+      const pattern = "saur";
+      const arr = [];
+
+      function handleEvent(e) {
+        // console.log(e.key);
+        arr.push(e.key);
+
+        if (arr.length > pattern.length) {
+          arr.splice(-arr.length, 1);
+        }
+
+        console.log(arr);
+
+        if (arr.join("").includes(pattern)) {
+          window.alert("🌶️🌶️🎆🏆🚀😊🎇😂🤣🙌😶‍🌫️🙄");
+        }
+      }
+
+      window.addEventListener("keydown", handleEvent);
+    </script>
+  </body>
+</html>
